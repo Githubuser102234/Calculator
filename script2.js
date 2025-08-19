@@ -1,5 +1,6 @@
 const calculator = document.querySelector('.calculator');
 const display = document.querySelector('.calculator-display');
+const buttons = document.querySelector('.calculator-buttons');
 
 let firstValue = null;
 let operator = null;
@@ -14,10 +15,15 @@ function updateDisplay() {
     }
 }
 
-const buttons = document.querySelector('.calculator-buttons');
 buttons.addEventListener('click', (event) => {
     const { target } = event;
     if (!target.matches('button')) return;
+
+    // Add active class for visual feedback
+    target.classList.add('active');
+    setTimeout(() => {
+        target.classList.remove('active');
+    }, 100); // Remove after a short delay
 
     if (target.classList.contains('operator-button')) {
         handleOperator(target.textContent);
@@ -65,7 +71,7 @@ function handleOperator(nextOperator) {
     if (firstValue === null) {
         firstValue = inputValue;
     } else if (operator) {
-        const result = performCalculation[operator](firstValue, inputValue);
+        const result = performCalculation[`${operator}`](firstValue, inputValue);
         display.textContent = `${parseFloat(result.toFixed(7))}`;
         firstValue = result;
     }
