@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>iOS Style Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="calculator">
-        <input type="text" class="calculator-screen" value="" disabled />
-
+        <div class="calculator-display">0</div>
+        
         <div class="calculator-buttons">
-            <button type="button" class="operator" value="+">+</button>
-            <button type="button" class="operator" value="-">-</button>
-            <button type="button" class="operator" value="*">&times;</button>
-            <button type="button" class="operator" value="/">&divide;</button>
+            <button class="button-ac operator-secondary">AC</button>
+            <button class="button-plus-minus operator-secondary">+/-</button>
+            <button class="button-percent operator-secondary">%</button>
+            <button class="button-divide operator-primary">&divide;</button>
 
-            <button type="button" value="7">7</button>
-            <button type="button" value="8">8</button>
-            <button type="button" value="9">9</button>
+            <button class="button-7">7</button>
+            <button class="button-8">8</button>
+            <button class="button-9">9</button>
+            <button class="button-multiply operator-primary">&times;</button>
 
-            <button type="button" value="4">4</button>
-            <button type="button" value="5">5</button>
-            <button type="button" value="6">6</button>
+            <button class="button-4">4</button>
+            <button class="button-5">5</button>
+            <button class="button-6">6</button>
+            <button class="button-subtract operator-primary">-</button>
 
-            <button type="button" value="1">1</button>
-            <button type="button" value="2">2</button>
-            <button type="button" value="3">3</button>
+            <button class="button-1">1</button>
+            <button class="button-2">2</button>
+            <button class="button-3">3</button>
+            <button class="button-add operator-primary">+</button>
 
-            <button type="button" class="decimal" value=".">.</button>
-            <button type="button" value="0">0</button>
-            <button type="button" class="all-clear" value="all-clear">AC</button>
-
-            <button type="button" class="equal-sign operator" value="=">=</button>
+            <button class="button-0">0</button>
+            <button class="button-decimal">.</button>
+            <button class="button-equal operator-primary">=</button>
         </div>
     </div>
 
